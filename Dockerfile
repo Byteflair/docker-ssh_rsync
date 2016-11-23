@@ -4,5 +4,8 @@ MAINTAINER Fran Alonso <fran.alonso@byteflair.com>
 RUN apt-get update && apt-get install -y \
 	ssh \
 	rsync \
-	sshpass && \
-	touch ~/.ssh/known_hosts
+	sshpass
+
+COPY ["entrypoint.sh", "/"]
+
+ENTRYPOINT ["/entrypoint.sh"]
