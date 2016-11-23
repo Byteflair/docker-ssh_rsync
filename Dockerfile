@@ -4,4 +4,5 @@ MAINTAINER Fran Alonso <fran.alonso@byteflair.com>
 RUN apt-get update && apt-get install -y \
 	ssh \
 	rsync \
-	sshpass
+	sshpass && \
+	touch ~/.ssh/known_hosts
